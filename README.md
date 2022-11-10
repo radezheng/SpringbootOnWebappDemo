@@ -27,7 +27,7 @@ mvn package azure-webapp:deploy -DskipTests
 ```
 查看日志:
  (需要在Web App的 App Service Logs中开启应用日志[Application Logging (Filesystem)](https://docs.microsoft.com/en-us/azure/app-service/troubleshoot-diagnostic-logs#application-logging-filesystem) )
- 
+
 ```shell
 # 下载完整日志
 az webapp log download --name webappsp --resource-group webappspring
@@ -35,6 +35,8 @@ az webapp log download --name webappsp --resource-group webappspring
 # 查看实时日志
 az webapp log tail --name webappsp --resource-group webappspring
 ```
+完整教程参考:
+https://learn.microsoft.com/zh-cn/azure/app-service/scripts/cli-monitor
 
 ## Azure Webapp 日志时区默认是UTC，需要修改为本地时区
 
